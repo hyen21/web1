@@ -1,0 +1,38 @@
+body{
+    height: 80vh;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    gap: 15px;
+}
+main{
+    margin-top: 50px;
+    display: flex;
+}
+.value1{
+    border: 2px solid black;
+    color: burlywood;
+}
+aside{
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+.stylesection{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer{
+    margin-top: 100px;
+    color: brown;
+    font-size: 25px;
+}
