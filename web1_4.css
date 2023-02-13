@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+header{
+    height: 10vh;
+}
+main{
+    display: flex;
+    flex-grow: 1;
+}
+aside{
+    width: 400px;
+    border: black solid 2px;
+}
+
+footer{
+    height: 10vh;
+    border: black solid 2px;
+    
+}
+
+div>section{
+    border: black solid 2px;
+}
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
