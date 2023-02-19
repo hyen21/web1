@@ -43,7 +43,10 @@ main{
 
 ul{
     list-style-type: none;
+    color: var(--white);
+    margin-right: 20px;
 }
+
 
 .container{
     display: flex;
@@ -56,8 +59,36 @@ ul{
 
 .container > section:nth-of-type(2) {
     flex-grow: 1;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+.textFuture{
+    margin-top: 15px;
+    font-size: 70px;
+    align-items: stretch;
+}
+.textRighr{
+    margin-left: 10px;
 }
 
+button{
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+    
+}
+button:hover{
+    background-color: var(--dark-blue);
+}
+.textNew{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 45px;
+    color: var(--primary-orange);
+}
 .top-new{
     display: flex;
     margin-top: 40px;
@@ -75,4 +106,14 @@ ul{
 }
 .new>div:nth-of-type(2){
     flex-grow: 2;
+}
+.textNote{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+b:hover{
+    background-color: var(--primary-orange);
+}
+a:hover{
+    background-color: var(--primary-orange);
 }

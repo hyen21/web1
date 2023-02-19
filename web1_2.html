@@ -16,32 +16,32 @@
     </center>
 
 
-    <div id='container'>
+    <div id='container' class="img-container">
         <center>
             <img src="esc.jpg">
         </center>
     </div>
 
+
     <center>
-        <div id="table1">
-        <table style="height: 200px;">
+        <table id="table1" style="height: 200px;">
             <tr>
                 <th>Họ Tên</th>
-                <th>Địa Chỉ</th>
+                <th class="color-red">Địa Chỉ</th>
                 <th>SDT</th>
             </tr>
             <tr>
                 <td>Ma Thị Huyền</td>
                 <td>Hà Nội</td>
-                <td>0965382531</td>
+                <td >0965382531</td>
                 <td>
                     <button type="button" onclick="alert('gửi thông tin thành công')"> Gửi Thông Tin </button>
                 </td>
             </tr>
             <tr>
-                <td>Nguyễn Văn A</td>
-                <td>Hà Nam</td>
-                <td>0123456789</td>
+                <td class="color-red underline">Nguyễn Văn A</td>
+                <td class="color-red">Hà Nam</td>
+                <td class="underline">0123456789</td>
                 <td>
                     <button type="button" onclick="alert('gửi thông tin thành công')"> Gửi Thông Tin </button>
                 </td>
@@ -51,11 +51,10 @@
                 <td>Nam Định</td>
                 <td>123456789</td>
                 <td>
-                    <button type="button" onclick="alert('gửi thông tin thành công')"> Gửi Thông Tin </button>
+                    <button v-on-submit="aaa" type="button" onclick="alert('gửi thông tin thành công')"> Gửi Thông Tin </button>
                 </td>
             </tr>
         </table>
-    </div>
     </center>
 
     <p>Bạn đã hoàn thành! </p>
