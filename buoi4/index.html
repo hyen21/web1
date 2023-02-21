@@ -10,106 +10,129 @@
 </head>
 
 <body>
+
+    <div class="cover"></div>
+
     <header>
         <img src="./assets/images/logo.svg">
-        <nav>
+
+        <nav id="nav-bar">
+            <div class="close-icon">
+                <img src="./assets/images/icon-menu-close.svg" alt="">
+            </div>
             <a href="#">Home</a>
-            <a href="#" New></a>
+            <a href="#">New</a>
             <a href="#">Popular</a>
             <a href="#">Trending</a>
             <a href="#">Categories</a>
         </nav>
+
+        <div class="menu-icon">
+            <img src="./assets/images/icon-menu.svg" alt="">
+        </div>
     </header>
 
-    <main>
-        <div class="container">
-            <section>
-                <div>
-                    <img style="width:100%" src="./assets/images/image-web-3-desktop.jpg">
-                </div>
-                <div class="top-new">
-                    <div class="textFuture">
-                        <b>The Bright Future of Web 3.0</b>
+    <div class="wrapper">       
+
+        <main>
+            <div class="container">
+                <section>
+                    <div class="hero">
+                        <img style="width:100%" src="./assets/images/image-web-3-desktop.jpg">
                     </div>
-                    <div class="textRight">
-                        <P>We dive into the next evolution of the web that claims to put the power of the platforms back
-                            into
-                            the hands of the people.
-                            But is it really fulfilling its promise?
-                        </p>
-                        <button>Read More</button>
+                    <div class="top-new">
+                        <div class="textFuture">
+                            The Bright Future of Web 3.0
+                        </div>
+                        <div class="textRight">
+                            <P>We dive into the next evolution of the web that claims to put the power of the platforms
+                                back
+                                into
+                                the hands of the people.
+                                But is it really fulfilling its promise?
+                            </p>
+                            <button>Read More</button>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div class="textNew">
+                        <p>NEW</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">Hydrogen VS Electric Cars</a>
+                            <p> Will hydrogen-fueled cars ever catch up to EVs? </p>
+                        </li>
+                        <li>
+                            <a href="#">The Downsides of AI Artistry</a>
+                            <p> What are the possible adverse effects of on-demand AI image generation? </p>
+                        </li>
+                        <li>
+                            <a href="#">Is VC Funding Drying Up?</a>
+                            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <section class="top-new">
+                <div class="new">
+                    <div class="newimg">
+                        <img src="./assets/images/image-retro-pcs.jpg">
+                    </div>
+                    <div class="textNote">
+                        <p>01</p>
+                        <b id="bnote1">Reviving Retro PCs</b> >
+                        <p>What happens when old PCs are given modern upgrades?</p>
+                    </div>
+                </div>
+                <div class="new">
+                    <div class="newimg">
+                        <img src="./assets/images/image-top-laptops.jpg">
+                    </div>
+                    <div class="textNote">
+                        <p>02</p>
+                        <b>Top 10 Laptops of 2022</b>
+                        <p>Our best picks for various needs and budgets.</p>
+                    </div>
+                </div>
+                <div class="new">
+                    <div class="newimg">
+                        <img src="./assets/images/image-gaming-growth.jpg">
+                    </div>
+                    <div class="textNote">
+                        <p>03</p>
+                        <b>The Growth of Gaming</b>
+                        <p>How the pandemic has sparked fresh opportunities.</p>
                     </div>
                 </div>
             </section>
 
+        </main>
 
-            <section>
-                <div class="textNew">
-                    <p>NEW</p>
-                </div>
-                <ul>
-                    <li>
-                        <a href="#">Hydrogen VS Electric Cars</a>
-                        <p> Will hydrogen-fueled cars ever catch up to EVs? </p>
-                    </li>
-                    <li>
-                        <a href="#">The Downsides of AI Artistry</a>
-                        <p> What are the possible adverse effects of on-demand AI image generation? </p>
-                    </li>
-                    <li>
-                        <a href="#">Is VC Funding Drying Up?</a>
-                        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-                    </li>
-                </ul>
-            </section>
+    </div>
+    <script lang="javascript">
+        
+        const menuButton = document.querySelector(".menu-icon");
+        const navBar = document.querySelector('#nav-bar');
+        const close= document.querySelector(".close-icon");
+        const cover = document.querySelector(".cover");
 
-        </div>
+        menuButton.addEventListener("click",(e)=>{
+            cover.classList.add("active");
+            navBar.classList.add("active");
+        }); 
+        close.addEventListener("click",(e)=>{
+            navBar.classList.remove("active");
+            cover.classList.remove("active");
+        })
 
-        <section class="top-new">
-            <div class="new">
-                <div>
-                    <img width="150px" height="150px" src="./assets/images/image-retro-pcs.jpg">
-                </div>
-                <div class="textNote">
-                    <p>01</p>
-                    <!-- <input type="button" id="note1" value="Reviving Retro PCs"> -->
-                    <b id="bnote1">Reviving Retro PCs</b> >
-                    <p>What happens when old PCs are given modern upgrades?</p>
-                </div>
-            </div>
-            <div class="new">
-                <div>
-                    <img width="150px" height="150px" src="./assets/images/image-top-laptops.jpg">
-                </div>
-                <div class="textNote">
-                    <p>02</p>
-                    <b>Top 10 Laptops of 2022</b>
-                    <p>Our best picks for various needs and budgets.</p>
-                </div>
-            </div>
-            <div class="new">
-                <div>
-                    <img width="150px" height="150px" src="./assets/images/image-gaming-growth.jpg">
-                </div>
-                <div class="textNote">
-                    <p>03</p>
-                    <b>The Growth of Gaming</b>
-                    <p>How the pandemic has sparked fresh opportunities.</p>
-                </div>
-            </div>
-        </section>
+    </script>
 
-    </main>
-    
-    <!-- <script lang="javascript">
-        var button1= document.getElementById("note1");
-        var inputbnote1= document.getElementById("bnote1");
-        button1.onclick= function(){
-            inputbnote1.style.background= "red";
-        }
-
-
-    </script> -->
 </body>
 
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 60px;
+            height: 60px;
+        }
+
+        .wrap {
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .first  {
+            background: blue;
+            position: relative;
+            top: 30px;
+            z-index: 90;
+        }
+
+        .second {
+            background: red;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 91;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div  class="first">
+            first element
+        </div>
+       
+
+        <div class="second">
+            second element
+        </div>
+    </div>
+
+    
+</body>
+</html>

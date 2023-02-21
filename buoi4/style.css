@@ -1,6 +1,7 @@
 :root {
     font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 15px;
+    color: var(--gray-blue);
 
     --bold:800;
     --semi-bold:700;
@@ -21,30 +22,63 @@ html, body {
     margin: 0;
     padding:0;
 }
-body{
+
+.wrapper {
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 60px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header{
+    width: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 32px 150px 24px;
+    background: var(--white);
+    height: 100%;
+   
 }
 nav{
     display: flex;
     gap: 30px;
+    font-size: medium;
 }
+
 main{
-    margin-top: 30px;
+    margin-top: 62px;
 }
 
 ul{
     list-style-type: none;
     color: var(--white);
     margin-right: 20px;
+    padding-left: 24px;
+}
+
+ul li {
+    padding-top: 14px;
+    padding-bottom:24px;
+    border-bottom: 2px solid var(--gray-blue);
+}
+
+ul li:last-of-type {
+    border-bottom: none;
+}
+
+ul li a {
+    font-weight: var(--bold);
+    color: var(--white);
+    font-size: 20px;
+}
+
+ul li p {
+    color: var(--blue);
 }
 
 
@@ -54,11 +88,11 @@ ul{
 }  
 
 .container > section:nth-of-type(1) {
-    flex-grow: 2;
+    flex: 2;
 }
 
 .container > section:nth-of-type(2) {
-    flex-grow: 1;
+    flex: 1;
     background-color: var(--dark-blue);
     color: var(--white);
 }
@@ -66,18 +100,22 @@ ul{
     margin-top: 15px;
     font-size: 70px;
     align-items: stretch;
+    color: var(--dark-blue);
+    font-weight: var(--bold);
 }
-.textRighr{
-    margin-left: 10px;
+.textRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 button{
     width: 150px;
     height: 60px;
     font-size: 20px;
-    border: 2px solid red;
-    background-color: red;
-    color: white;
+    border: none;
+    background-color:var(--primary-red);
+    color: var(--white);
     
 }
 button:hover{
@@ -85,9 +123,10 @@ button:hover{
 }
 .textNew{
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left:24px;
     font-size: 45px;
     color: var(--primary-orange);
+    font-weight: var(--bold);
 }
 .top-new{
     display: flex;
@@ -101,19 +140,132 @@ button:hover{
     display: flex;
 }
 .new > div:nth-of-type(1){
-    flex-grow: 1;
+    flex: 1;
 
 }
 .new>div:nth-of-type(2){
-    flex-grow: 2;
+    flex: 2;
 }
 .textNote{
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.textNote p:nth-of-type(1){
+    font-size: 32px;
+    font-weight: var(--bold);
+    margin-top: 0;
+}
+
 b:hover{
     background-color: var(--primary-orange);
 }
 a:hover{
     background-color: var(--primary-orange);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.close-icon {
+    display: none;
+}
+
+.newimg{
+    width: 150px;
+    height: 150px;
+}
+
+.newimg img {
+    width: 100%;
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    display: none;
+}
+
+.cover.active {
+    display: block;
+    z-index: 30;
+}
+
+@media only screen and (max-width: 600px){
+
+    header {
+        padding: 24px 10px 12px;
+        box-shadow: 0 10px 10px rgba(66, 66, 66, 0.234);
+        position: sticky;
+        top: 0;
+    }
+
+    header:has(nav.active) {
+        z-index: 200;
+    }
+
+    .hero {
+        width: 100%;
+        height: 360px;
+    }
+
+    .hero img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .wrapper {
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-top: 32px;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        z-index: 300;
+        right: 30px;
+        top: 30px;
+    }
+
+    nav {
+        position: fixed;
+        right: -1000px;
+        bottom: 0;
+        background: var(--white);
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 66%;
+        padding-left: 16px;
+        padding-top: 160px;
+        transition-duration: 1s;
+    }
+
+    nav.active {
+        right: 0;
+        z-index: 200;
+    }
+
+    nav a {
+        color: var(--dark-blue);
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .top-new {
+        flex-direction: column;
+    }
+    .new{
+        padding-bottom: 16px;
+    }
 }
